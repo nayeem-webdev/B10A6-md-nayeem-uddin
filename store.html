@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Peddy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "rgba(14, 122, 129, 1)",
+              primary15: "rgba(14, 122, 129, 0.15)",
+              primary20: "rgba(14, 122, 129, 0.2)",
+              primary30: "rgba(14, 122, 129, 0.3)",
+              text: "rgba(19, 19, 19, 1)",
+              text70: "rgba(19, 19, 19, 0.7)",
+              text60: "rgba(19, 19, 19, 0.6)",
+              textWhite60: "rgba(255, 255, 255, 0.6)",
+              textWhite5: "rgba(255, 255, 255, 0.05)",
+            },
+          },
+        },
+      };
+    </script>
+    <script
+      src="https://kit.fontawesome.com/12c401b8a1.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <html>
+    <body>
+      <!-- Pet container Sample -->
+      <div class="border rounded-xl p-5">
+        <img
+          class="h-[250px] sm:h-[320px] md:h-[220px] xl:h-[160px] object-cover w-full rounded-lg"
+          src="https://i.ibb.co.com/p0w744T/pet-1.jpg"
+          alt="Pet Image"
+        />
+        <p class="font-black text-xl mt-6 mb-2">Mr Taposh</p>
+        <p class="text-text70">
+          <i class="fa-solid fa-dna mr-2"></i> Breed: Golden Retriever
+        </p>
+        <p class="text-text70">
+          <i class="fa-regular fa-calendar mr-2"></i> Birth: 2024
+        </p>
+        <p class="text-text70">
+          <i class="fa-solid fa-mercury mr-2"></i> Gender: Female
+        </p>
+        <p class="text-text70 mb-4">
+          <i class="fa-solid fa-tag mr-2"></i> Price: $199
+        </p>
+        <hr />
+        <div class="grid grid-cols-8 gap-4 mt-4">
+          <button
+            onclick="likeButton(event)"
+            class="border text-primary border-primary20 transition hover:bg-primary15 hover:text-red-700 font-bold text-lg py-2 rounded-lg col-span-2"
+          >
+            <i class="fa-solid fa-heart"></i>
+          </button>
+          <button
+            class="border text-primary border-primary20 transition hover:bg-primary15 disabled:bg-gray-200 disabled:text-gray-400 font-bold text-lg py-2 rounded-lg col-span-3"
+          >
+            Adopt
+          </button>
+          <button
+            class="border text-primary border-primary20 transition hover:bg-primary15 disabled:bg-gray-400 disabled:text-gray-600 font-bold text-lg py-2 rounded-lg col-span-3"
+          >
+            Details
+          </button>
+        </div>
+      </div>
+
+      <!-- Categories -->
+      <div
+        class="cursor-pointer border-2 border-primary15 rounded-xl flex justify-center items-center py-6 gap-3 w-full transition hover:rounded-[120px] hover:border-primary hover:bg-primary15"
+      >
+        <img class="h-14" src="images/002-dog.png" alt="" />
+        <h3 class="text-2xl font-black text-text">Dogs</h3>
+      </div>
+      <div
+        class="cursor-pointer border-2 border-primary15 rounded-xl flex justify-center items-center py-6 gap-3 w-full transition hover:rounded-[120px] hover:border-primary hover:bg-primary15"
+      >
+        <img class="h-14" src="images/001-cat.png" alt="" />
+        <h3 class="text-2xl font-black text-text">Cats</h3>
+      </div>
+      <div
+        class="cursor-pointer border-2 border-primary15 rounded-xl flex justify-center items-center py-6 gap-3 w-full transition hover:rounded-[120px] hover:border-primary hover:bg-primary15"
+      >
+        <img class="h-14" src="images/004-rabbit.png" alt="" />
+        <h3 class="text-2xl font-black text-text">Rabbits</h3>
+      </div>
+      <div
+        class="cursor-pointer border-2 border-primary15 rounded-xl flex justify-center items-center py-6 gap-3 w-full transition hover:rounded-[120px] hover:border-primary hover:bg-primary15"
+      >
+        <img class="h-14" src="images/003-parrot.png" alt="" />
+        <h3 class="text-2xl font-black text-text">Birds</h3>
+      </div>
+
+      <!-- image Sample -->
+      <img
+        class="h-[100px] object-cover w-full rounded-lg"
+        src="https://i.ibb.co.com/p0w744T/pet-1.jpg"
+        alt="Pet Thumbnail"
+      />
+
+      loader
+      <div class="w-full flex items-center justify-center">
+        <div>
+          <img class="w-[600px]" src="images/dog.gif" alt="" />
+          <p class="text-2xl text-center font-bold">
+            Hold on! My Friends are Coming...
+          </p>
+        </div>
+      </div>
+
+      <!-- modal
+<div
+class="bg-black bg-opacity-40 h-screen fixed inset-0 flex items-center justify-center"
+>
+<div
+  class="bg-white shadow-xl rounded-lg p-5 w-[90%] md:w-[650px] flex flex-col justify-center gap-3"
+>
+  <img
+    class="w-full h-[300px] object-cover object-top rounded-md"
+    src="https://i.ibb.co.com/p0w744T/pet-1.jpg"
+    alt=""
+  />
+  <h1 class="font-extrabold text-4xl">Wajed Joy</h1>
+  <div class="flex gap-5 md:gap-20">
+    <div>
+      <p class="text-text70">
+        <i class="fa-solid fa-dna mr-2"></i> Breed: Golden Retriever
+      </p>
+      <p class="text-text70">
+        <i class="fa-solid fa-mercury mr-2"></i> Gender: Female
+      </p>
+      <p class="text-text70">
+        <i class="fa-solid fa-syringe"></i> Vaccinated status:
+        Partially
+      </p>
+    </div>
+    <div>
+      <p class="text-text70">
+        <i class="fa-regular fa-calendar mr-2"></i> Birth: 2024
+      </p>
+      <p class="text-text70 mb-4">
+        <i class="fa-solid fa-tag mr-2"></i> Price: $199
+      </p>
+    </div>
+  </div>
+  <hr />
+
+  <p class="font-bold text-xl">
+    Thanks for your generous donation to Humankind!
+  </p>
+  <p class="">
+    It is a long established fact that a reader will be distracted
+    by the readable content of a page when looking at its layout.
+    The point of using is that it has a more-or-less normal
+    distribution of letters, as opposed to using.
+  </p>
+  <button
+    id="closeInfo"
+    class="border bg-primary15 text-primary border-primary transition hover:bg-primary30 font-bold text-lg py-2 rounded-lg col-span-3"
+  >
+    Close
+  </button>
+</div>
+</div> -->
+
+      <div class="cards">
+        <div class="card">
+          <h3>Product 1</h3>
+          <p class="price">$30</p>
+        </div>
+        <div class="card">
+          <h3>Product 2</h3>
+          <p class="price">$50</p>
+        </div>
+        <div class="card">
+          <h3>Product 3</h3>
+          <p class="price">$10</p>
+        </div>
+      </div>
+
+      <button id="sortAsc">Sort by Price (Ascending)</button>
+      <button id="sortDesc">Sort by Price (Descending)</button>
+
+      <button onclick="wait(event)">hello</button>
+      <button onclick="wait(event)">hello2</button>
+      <button onclick="wait(event)">hello3</button>
+      <script src="js/utilities.js"></script>
+
+      <p class="text-text70 mb-4">
+        <i class="fa-solid fa-tag mr-2"></i> Price: $
+        <span class="petPrice"
+          >${ pet.price === null || pet.price === undefined ? "Not Listed" :
+          pet.price }</span
+        >
+      </p>
+
+      <div>
+        <!-- NO INFO -->
+        <div
+          class="flex w-full row-span-2 col-span-1 md:col-span-2 lg:col-span-3 items-center justify-center"
+        >
+          <div>
+            <img class="w-[600px]" src="images/dog.gif" alt="" />
+            <p class="text-2xl text-center font-bold">
+              🌟 Oops! It looks like we don’t have pets available.
+            </p>
+            <br />
+            <p class="text-center">
+              But don’t worry! We’re working hard to bring in more friendly pets
+              soon. 🐾 <br />If you’d like to stay updated on our newest
+              arrivals, please subscribe to our newsletter.💖
+            </p>
+          </div>
+        </div>
+      </div>
+    </body>
+  </html>
+</html>
